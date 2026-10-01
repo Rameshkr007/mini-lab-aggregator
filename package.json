@@ -1,0 +1,15 @@
+{
+  "name": "mini-lab-aggregator",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Compare diagnostic tests and packages by true final price for a pincode",
+  "scripts": {
+    "install:all": "npm install && npm install --prefix backend && npm install --prefix frontend",
+    "dev": "concurrently -n api,web -c cyan,magenta \"npm run dev --prefix backend\" \"npm run dev --prefix frontend\"",
+    "build": "npm run build --prefix frontend",
+    "test": "npm test --prefix backend && npm test --prefix frontend"
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  }
+}
